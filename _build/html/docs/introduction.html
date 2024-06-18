@@ -382,7 +382,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -398,6 +400,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -410,7 +423,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
 <p>This will be the introduction page of our jupyter book, treat this as a landing page.</p>
-<p><a class="reference external" href="https://goofvanriet.github.io/infovis/docs/carbon_emmissions.html">Click here to read the data story.</a></p>
+<p><a class="reference external" href="https://goofvanriet.github.io/infovis/docs/carbon_emmissions.html">Click here</a> to read the data story.</p>
 <p><strong>Authors</strong></p>
 <ul class="simple">
 <li><p>Anou Prins</p></li>
@@ -418,6 +431,31 @@ document.write(`
 <li><p>Tom Kuin</p></li>
 <li><p>Goof van Riet</p></li>
 </ul>
+<section id="inleiding">
+<h2>Inleiding<a class="headerlink" href="#inleiding" title="Link to this heading">#</a></h2>
+<p>Terwijl economische groei lange tijd werd gezien als een manier om de wereldwijde levensstandaarden te verbeteren, roept deze ontwikkeling de laatste decennia vragen op over de duurzaamheid ervan.
+Hoewel nieuwe wetten en beleiden zijn ingevoerd die gericht zijn op het verminderen van wereldwijde CO2-emissies, blijft het een onopgelost probleem.
+We zien dit terug in het nieuws en in protesten, die zich vooral plaatsvinden in westerse, welvarende landen.</p>
+<p>Om de huidige staat van CO2-emissies te visualiseren, zien we in onderstaand figuur de verdeling van CO2-emissies per bron. Deze verdeling benadrukt dat olie in 2022 de dominante bron van CO2-uitstoot is, en dat grondstoffen als steenkool, nog steeds een groot aandeel van de CO2-emissies bedragen. Het feit dat koolstof, een bekend milieuonvriendelijke grondstof, nog steeds een aanzienlijke bijdrage levert, laat de relevantie van dit probleem zien.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> co2_sources_2022.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c8b7f7a58d63aa7f961b7224b825007a98ef1b7f4400c5fe3f801c496fd5d02f.png" src="../_images/c8b7f7a58d63aa7f961b7224b825007a98ef1b7f4400c5fe3f801c496fd5d02f.png" />
+</div>
+</div>
+<p>In dit onderzoek willen wij onderzoeken hoe de welvaart van landen correleert met trends in CO2-uitstoot. In het bijzonder zullen we de correlatie tussen jaarlijkse CO2-uitstoot en kenmerken zoals HDI verkennen. HDI is een samengestelde index die de menselijke ontwikkeling meet aan de hand van levensverwachting, onderwijsniveau en inkomen per capita. Om ons te verdiepen in de correlatie tussen CO2-emissies en HDI, willen we ook kijken naar de invloeden van de HDI-indicatoren op CO2-uitstoot. Dit doen we door te kijken naar het Bruto Binnenlands Product (BBP) per capita en levensverwachting. Door gebruik te maken van een uitgebreide dataset over CO2-emissies, aangeboden door Our World In Data (Ritchie et al., 2023), kunnen we de emissie-trends over de jaren heen analyseren. Voor de HDI-gegevens maken we gebruik van een dataset uit de Human development Reports (UNDP, 2023).</p>
+<section id="referenties">
+<h3>Referenties<a class="headerlink" href="#referenties" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Ritchie, H., Roser, M., &amp; Rosado, P. (2023). CO2 and Greenhouse Gas Emissions Data. Our World in Data. Retrieved from <a class="github reference external" href="https://github.com/owid/co2-data/blob/master/owid-co2-codebook.csv">owid/co2-data</a></p></li>
+<li><p>United Nations Development Programme (UNDP). (2023). Human Development Index (HDI). Human Development Data Center. Retrieved from <a class="reference external" href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI">https://hdr.undp.org/data-center/human-development-index#/indicies/HDI</a></p></li>
+</ol>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -474,6 +512,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
