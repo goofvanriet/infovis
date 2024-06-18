@@ -7,7 +7,7 @@ chapters:
 - file: docs/notebook
 - file: docs/introduction
 - file: docs/dataset_preprocessing
-- file: docs/carbon_emissions
+- file: docs/carbon_emmissions
 - file: docs/reflection
 - file: docs/work_distribution
 - file: docs/story
