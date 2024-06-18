@@ -4,10 +4,8 @@
 format: jb-book
 root: docs/home
 chapters:
-- file: docs/notebook
 - file: docs/introduction
 - file: docs/dataset_preprocessing
-- file: docs/carbon_emmissions
+- file: docs/story
 - file: docs/reflection
 - file: docs/work_distribution
-- file: docs/story
