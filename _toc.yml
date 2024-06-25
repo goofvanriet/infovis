@@ -2,10 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: docs/home
+root: docs/home.ipynb
 chapters:
-- file: docs/introduction
-- file: docs/dataset_preprocessing
-- file: docs/story
-- file: docs/reflection
-- file: docs/work_distribution
+- file: docs/story.ipynb
+- file: docs/dataset_preprocessing.ipynb
+- file: docs/reflection.ipynb
+- file: docs/work_distribution.ipynb
