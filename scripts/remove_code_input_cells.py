@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
-
-
 """
 Helper script to ensure every code cell is being hidden before deploying.
 This is done by adding the `remove_input` metadata to each cell.
 """
-
-
 import nbformat as nbf
 from os import path
 
