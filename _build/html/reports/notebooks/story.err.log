@@ -79,7 +79,7 @@ File [0;32m~/anaconda3/lib/python3.11/site-packages/IPython/core/interactiveshe
 
     [0;31m[... skipping hidden 1 frame][0m
 
-File [0;32m/tmp/ipykernel_97963/4214927715.py:22[0m
+File [0;32m/tmp/ipykernel_103562/4214927715.py:22[0m
 [1;32m     20[0m plt[38;5;241m.[39mxlabel([38;5;124m'[39m[38;5;124mYear[39m[38;5;124m'[39m)
 [1;32m     21[0m plt[38;5;241m.[39mylabel([38;5;124m'[39m[38;5;124mValue[39m[38;5;124m'[39m)
 [0;32m---> 22[0m fig[38;5;241m.[39mupdate_yaxes(title_text[38;5;241m=[39m[38;5;124m"[39m[38;5;124m<b>primary</b> yaxis title[39m[38;5;124m"[39m, secondary_y[38;5;241m=[39m[38;5;28;01mFalse[39;00m)
