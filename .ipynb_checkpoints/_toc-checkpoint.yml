@@ -1,0 +1,10 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: notebooks/home.ipynb
+chapters:
+- file: notebooks/story.ipynb
+- file: notebooks/dataset_preprocessing.ipynb
+- file: notebooks/reflection.ipynb
+- file: notebooks/work_distribution.ipynb
