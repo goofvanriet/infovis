@@ -1,0 +1,76 @@
+Traceback (most recent call last):
+  File "/home/goof/anaconda3/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/goof/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/goof/anaconda3/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/goof/anaconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/goof/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/home/goof/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/goof/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+df_plot['Year'] = df_plot['Year'].astype(int)
+df_plot['HDI'] = pd.to_numeric(df_plot['HDI'], errors='coerce')
+df_plot['Renewable Energy'] = pd.to_numeric(df_plot['Renewable Energy'], errors='coerce')
+
+# Print data types and sample data for debugging
+print(df_plot.dtypes)
+print(df_plot.head())
+
+# Plot the data
+plt.figure(figsize=(12, 6))
+
+# Plot HDI values
+plt.plot(df_plot['Year'].values, df_plot['HDI'].values, label='HDI', color='blue', marker='o')
+
+# Plot renewable energy values
+plt.plot(df_plot['Year'].values, df_plot['Renewable Energy'].values, label='Renewable Energy', color='green', marker='x')
+
+# Add titles and labels
+plt.title('HDI and Renewable Energy Consumption for World (1990-2020)')
+plt.xlabel('Year')
+plt.ylabel('Value')
+fig.update_yaxes(title_text="<b>primary</b> yaxis title", secondary_y=False)
+fig.update_yaxes(title_text="<b>secondary</b> yaxis title", secondary_y=True)
+
+plt.legend()
+
+# Show plot
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+------------------
+
+----- stdout -----
+Year                  int64
+HDI                 float64
+Renewable Energy    float64
+dtype: object
+   Year    HDI  Renewable Energy
+0  1990  0.601         16.662330
+2  1991  0.604         16.821274
+4  1992  0.607         17.165780
+6  1993  0.610         17.209889
+8  1994  0.614         17.354901
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[3], line 10[0m
+[1;32m      7[0m [38;5;28mprint[39m(df_plot[38;5;241m.[39mhead())
+[1;32m      9[0m [38;5;66;03m# Plot the data[39;00m
+[0;32m---> 10[0m plt[38;5;241m.[39mfigure(figsize[38;5;241m=[39m([38;5;241m12[39m, [38;5;241m6[39m))
+[1;32m     12[0m [38;5;66;03m# Plot HDI values[39;00m
+[1;32m     13[0m plt[38;5;241m.[39mplot(df_plot[[38;5;124m'[39m[38;5;124mYear[39m[38;5;124m'[39m][38;5;241m.[39mvalues, df_plot[[38;5;124m'[39m[38;5;124mHDI[39m[38;5;124m'[39m][38;5;241m.[39mvalues, label[38;5;241m=[39m[38;5;124m'[39m[38;5;124mHDI[39m[38;5;124m'[39m, color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mblue[39m[38;5;124m'[39m, marker[38;5;241m=[39m[38;5;124m'[39m[38;5;124mo[39m[38;5;124m'[39m)
+
+[0;31mNameError[0m: name 'plt' is not defined
+
