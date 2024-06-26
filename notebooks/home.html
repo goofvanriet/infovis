@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Theme &#8212; Jupyter Book CO2</title>
+    <title>Introduction &#8212; Jupyter Book CO2</title>
   
   
   
@@ -58,10 +58,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/set_theme';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/home';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Perspectief 1 ; CO2 uitstoot and HDI" href="story.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -142,7 +143,7 @@
 
   
 
-<a class="navbar-brand logo" href="home.html">
+<a class="navbar-brand logo" href="#">
   
   
   
@@ -167,8 +168,8 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="home.html">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
                     Introduction
                 </a>
             </li>
@@ -233,7 +234,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/goofvanriet/infovis/blob/main/docs/notebooks/set_theme.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/goofvanriet/infovis/blob/main/docs/notebooks/home.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -281,7 +282,7 @@
       
       
       
-      <li><a href="https://github.com/goofvanriet/infovis/issues/new?title=Issue%20on%20page%20%2Fnotebooks/set_theme.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/goofvanriet/infovis/issues/new?title=Issue%20on%20page%20%2Fnotebooks/home.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -311,7 +312,7 @@
       
       
       
-      <li><a href="../_sources/notebooks/set_theme.ipynb" target="_blank"
+      <li><a href="../_sources/notebooks/home.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +383,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -393,11 +396,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Theme</h1>
+    <h1>Introduction</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -407,69 +421,47 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="theme">
-<h1>Theme<a class="headerlink" href="#theme" title="Link to this heading">#</a></h1>
-<p>The code below enables a custom theme which can be added to the top of each notebook by adding %run set_theme.ipynb, preferablly as the first cell to keep it consistent.</p>
-<div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
-
-<span class="k">if</span> <span class="s1">&#39;custom&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="p">:</span>
-    <span class="n">transparent</span> <span class="o">=</span> <span class="s1">&#39;rgba(0,0,0,0)&#39;</span>
-    <span class="n">bgcolor</span> <span class="o">=</span> <span class="s1">&#39;#fdead4&#39;</span>
-    <span class="n">black</span> <span class="o">=</span> <span class="s1">&#39;#343a42&#39;</span>
-    <span class="n">cyan</span> <span class="o">=</span> <span class="s1">&#39;#4edcda&#39;</span>
-    <span class="n">darkcyan</span> <span class="o">=</span> <span class="s1">&#39;#2b9694&#39;</span>
-    <span class="n">blue</span> <span class="o">=</span> <span class="s1">&#39;#4c75eb&#39;</span>
-    <span class="n">darkblue</span> <span class="o">=</span> <span class="s1">&#39;#3a34b5&#39;</span>
-    <span class="n">pink</span> <span class="o">=</span> <span class="s1">&#39;#ef4de5&#39;</span>
-    <span class="n">purple</span> <span class="o">=</span> <span class="s1">&#39;#a736a0&#39;</span>
-    <span class="n">red</span> <span class="o">=</span> <span class="s1">&#39;#f74e4e&#39;</span>
-    <span class="n">darkred</span> <span class="o">=</span> <span class="s1">&#39;#b33c3c&#39;</span>
-    <span class="n">green</span> <span class="o">=</span> <span class="s1">&#39;#2d8923&#39;</span>
-    <span class="n">darkgreen</span> <span class="o">=</span> <span class="s1">&#39;#2d8923&#39;</span>
-    <span class="n">orange</span> <span class="o">=</span> <span class="s1">&#39;#f7b24e&#39;</span>
-    <span class="n">brown</span> <span class="o">=</span> <span class="s1">&#39;#d8bea1&#39;</span>
-
-    <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s1">&#39;custom&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s1">&#39;plotly&#39;</span><span class="p">]</span>
-
-    <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s1">&#39;custom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-        <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span>
-                    <span class="s1">&#39;marker&#39;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
-                    <span class="p">}</span>
-                <span class="p">}</span>
-            <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="s1">&#39;layout&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;paper_bgcolor&#39;</span><span class="p">:</span> <span class="n">bgcolor</span><span class="p">,</span>
-            <span class="s1">&#39;plot_bgcolor&#39;</span><span class="p">:</span> <span class="n">transparent</span><span class="p">,</span>
-            <span class="s1">&#39;font&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="n">black</span><span class="p">},</span>
-            <span class="s1">&#39;xaxis&#39;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s1">&#39;zerolinecolor&#39;</span><span class="p">:</span> <span class="n">brown</span><span class="p">,</span>
-                <span class="s1">&#39;gridcolor&#39;</span><span class="p">:</span> <span class="n">brown</span><span class="p">,</span>
-                <span class="s1">&#39;zerolinewidth&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="p">},</span>
-            <span class="s1">&#39;yaxis&#39;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s1">&#39;zerolinecolor&#39;</span><span class="p">:</span> <span class="n">brown</span><span class="p">,</span>
-                <span class="s1">&#39;gridcolor&#39;</span><span class="p">:</span> <span class="n">brown</span><span class="p">,</span>
-                <span class="s1">&#39;zerolinewidth&#39;</span><span class="p">:</span> <span class="mi">1</span>
-            <span class="p">},</span>
-           <span class="s1">&#39;colorway&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">black</span><span class="p">,</span>
-                        <span class="n">cyan</span><span class="p">,</span>     <span class="n">blue</span><span class="p">,</span>     <span class="n">pink</span><span class="p">,</span>   <span class="n">red</span><span class="p">,</span>     <span class="n">green</span><span class="p">,</span>     <span class="n">orange</span><span class="p">,</span>
-                        <span class="n">darkcyan</span><span class="p">,</span> <span class="n">darkblue</span><span class="p">,</span> <span class="n">purple</span><span class="p">,</span> <span class="n">darkred</span><span class="p">,</span> <span class="n">darkgreen</span><span class="p">],</span>
-            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
-            <span class="s1">&#39;annotationdefaults&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;arrowcolor&#39;</span><span class="p">:</span> <span class="n">black</span><span class="p">},</span>
-
-        <span class="p">}</span>
-    <span class="p">})</span>
-
-    <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> set_theme.ipynb
 </pre></div>
 </div>
 </div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
+<p>This will be the introduction page of our jupyter book, treat this as a landing page.</p>
+<p><a class="reference external" href="https://goofvanriet.github.io/infovis/docs/story.html">Click here to read the data story. </a></p>
+<p><strong>Authors</strong></p>
+<ul class="simple">
+<li><p>Anou Prins</p></li>
+<li><p>Efehan Kuznek</p></li>
+<li><p>Tom Kuin</p></li>
+<li><p>Goof van Riet</p></li>
+</ul>
+<section id="inleiding">
+<h2>Inleiding<a class="headerlink" href="#inleiding" title="Link to this heading">#</a></h2>
+<p>Terwijl economische groei lange tijd werd gezien als een manier om de wereldwijde levensstandaarden te verbeteren, roept deze ontwikkeling de laatste decennia vragen op over de duurzaamheid ervan.
+Hoewel nieuwe wetten en beleiden zijn ingevoerd die gericht zijn op het verminderen van wereldwijde CO2-emissies, blijft het een onopgelost probleem.
+We zien dit terug in het nieuws en in protesten, die zich vooral plaatsvinden in westerse, welvarende landen.</p>
+<p>Om de huidige staat van CO2-emissies te visualiseren, zien we in onderstaand figuur de verdeling van CO2-emissies per bron. Deze verdeling benadrukt dat olie in 2022 de dominante bron van CO2-uitstoot is, en dat grondstoffen als steenkool, nog steeds een groot aandeel van de CO2-emissies bedragen. Het feit dat koolstof, een bekend milieuonvriendelijke grondstof, nog steeds een aanzienlijke bijdrage levert, laat de relevantie van dit probleem zien.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#%run co2_sources_2022.ipynb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img title="a title" alt="Alt text" src="coal_pie_chart.png"><p>In dit onderzoek willen wij onderzoeken hoe de welvaart van landen correleert met trends in CO2-uitstoot. In het bijzonder zullen we de correlatie tussen jaarlijkse CO2-uitstoot en kenmerken zoals HDI verkennen. HDI is een samengestelde index die de menselijke ontwikkeling meet aan de hand van levensverwachting, onderwijsniveau en inkomen per capita. Om ons te verdiepen in de correlatie tussen CO2-emissies en HDI, willen we ook kijken naar de invloeden van de HDI-indicatoren op CO2-uitstoot. Dit doen we door te kijken naar het Bruto Binnenlands Product (BBP) per capita en levensverwachting. Door gebruik te maken van een uitgebreide dataset over CO2-emissies, aangeboden door Our World In Data (Ritchie et al., 2023), kunnen we de emissie-trends over de jaren heen analyseren. Voor de HDI-gegevens maken we gebruik van een dataset uit de Human development Reports (UNDP, 2023).</p>
+<section id="referenties">
+<h3>Referenties<a class="headerlink" href="#referenties" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Ritchie, H., Roser, M., &amp; Rosado, P. (2023). CO2 and Greenhouse Gas Emissions Data. Our World in Data. Retrieved from <a class="github reference external" href="https://github.com/owid/co2-data/blob/master/owid-co2-codebook.csv">owid/co2-data</a></p></li>
+<li><p>United Nations Development Programme (UNDP). (2023). Human Development Index (HDI). Human Development Data Center. Retrieved from <a class="reference external" href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI">https://hdr.undp.org/data-center/human-development-index#/indicies/HDI</a></p></li>
+</ol>
+</section>
+</section>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -503,12 +495,39 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="right-next"
+       href="story.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Perspectief 1 ; CO2 uitstoot and HDI</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referenties">Referenties</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
