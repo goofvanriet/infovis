@@ -7,11 +7,12 @@
 - Efehan Kuznek: 14012847
 - Tom Kuin: 13186280
 - Goof van Riet: 14715988
+
 Terwijl economische groei lange tijd werd gezien als een manier om de wereldwijde levensstandaarden te verbeteren, roept deze ontwikkeling de laatste decennia vragen op over de duurzaamheid ervan. Hoewel nieuwe wetten en beleid zijn ingevoerd die gericht zijn op het verminderen van wereldwijde CO2-emissies, blijft het een onopgelost probleem. We zien dit terug in het nieuws en in protesten, die zich vooral voordoen in westerse, welvarende landen.
 
 Om de huidige staat van CO2-emissies te visualiseren, zien we in onderstaand figuur de verdeling van CO2-emissies per bron. Deze verdeling benadrukt dat olie in 2022 de dominante bron van CO2-uitstoot is, en dat grondstoffen als steenkool nog steeds een groot aandeel van de CO2-emissies vormen. Het feit dat koolstof, een bekend milieuonvriendelijke grondstof, nog steeds een aanzienlijke bijdrage levert, laat de relevantie van dit probleem zien.
 
-```bash
+```python
 %run notebooks/co2_sources_2022.ipynb
 
 
