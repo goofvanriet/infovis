@@ -12,7 +12,7 @@ Terwijl economische groei lange tijd werd gezien als een manier om de wereldwijd
 Om de huidige staat van CO2-emissies te visualiseren, zien we in onderstaand figuur de verdeling van CO2-emissies per bron. Deze verdeling benadrukt dat olie in 2022 de dominante bron van CO2-uitstoot is, en dat grondstoffen als steenkool nog steeds een groot aandeel van de CO2-emissies vormen. Het feit dat koolstof, een bekend milieuonvriendelijke grondstof, nog steeds een aanzienlijke bijdrage levert, laat de relevantie van dit probleem zien.
 
 ```bash
-%run co2_sources_2022.ipynb
+%run notebooks/co2_sources_2022.ipynb
 
 
 In dit onderzoek willen wij onderzoeken hoe de welvaart van landen correleert met trends in CO2-uitstoot. In het bijzonder zullen we de correlatie tussen jaarlijkse CO2-uitstoot en de Human Development Indicator (HDI) verkennen. HDI is een samengestelde index die de menselijke ontwikkeling meet aan de hand van levensverwachting, onderwijsniveau en inkomen per capita (BBP).
