@@ -14,7 +14,7 @@ Om de huidige staat van CO2-emissies te visualiseren, zien we in onderstaand fig
 
 ```python
 %run notebooks/co2_sources_2022.ipynb
-
+```
 
 In dit onderzoek willen wij onderzoeken hoe de welvaart van landen correleert met trends in CO2-uitstoot. In het bijzonder zullen we de correlatie tussen jaarlijkse CO2-uitstoot en de Human Development Indicator (HDI) verkennen. HDI is een samengestelde index die de menselijke ontwikkeling meet aan de hand van levensverwachting, onderwijsniveau en inkomen per capita (BBP).
 
