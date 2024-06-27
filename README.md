@@ -24,10 +24,12 @@ Terwijl economische groei lange tijd werd gezien als een manier om de wereldwijd
 </body>
 </html>
 
+## Onderzoek
 In dit onderzoek willen wij onderzoeken hoe de welvaart van landen correleert met trends in CO2-uitstoot. In het bijzonder zullen we de correlatie tussen jaarlijkse CO2-uitstoot en de Human Development Indicator (HDI) verkennen. HDI is een samengestelde index die de menselijke ontwikkeling meet aan de hand van levensverwachting, onderwijsniveau en inkomen per capita (BBP).
 
 Naast CO2-uitstoot en HDI, willen we gaan kijken naar de verduurzaming van energiebronnen en de relatie daarvan met HDI. We zullen ons focussen op het verband tussen de transitie naar duurzamere energiebronnen en de ontwikkeling van een land volgens de HDI.
 
+## Data
 We zullen gebruikmaken van een uitgebreide dataset over CO2-emissies, beschikbaar gesteld door Our World In Data (Ritchie et al., 2023), om de emissietrends over de jaren heen te analyseren. Voor de HDI-gegevens gebruiken we een dataset van de Human Development Reports (UNDP, 2023). Ten slotte gebruiken we een dataset over kosten van de Levelized Costs of Energy (LCOE) (Our world in Data, 2024).
 Datasets
 
